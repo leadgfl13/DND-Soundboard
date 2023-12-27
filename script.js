@@ -1,3 +1,9 @@
 let keyA = document.getElementById('keyA')
 
-keyA.addEventListener('click', ()=>{alert("Hello")})
+addEventListener('keypress', keyEvent)
+
+function keyEvent(e){
+    if(e.keyCode = 'a'){
+        alert("hjello")
+    }
+}
