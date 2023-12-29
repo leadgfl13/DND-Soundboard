@@ -1,5 +1,5 @@
 body{
-    background-color:lightcyan;
+    background-color:rgb(57, 184, 184);
     margin:0;
     height:100vh;
 }
@@ -11,11 +11,11 @@ body{
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows:1fr 1fr;
-    border:solid green 1px;
+    
 }
 
 .title{
-    border:solid blue 2px;
+    text-decoration:underline;;
     grid-area:1/1/2/2;
     font-size:80px;
     margin:auto;
@@ -23,7 +23,6 @@ body{
 
 .keycontainers{
     height:200px;
-    border:solid purple 2px;
     display:grid;
     grid-template-columns:repeat(8, 1fr);
     grid-template-rows:1fr 1fr;
@@ -44,7 +43,21 @@ body{
     justify-content:center;
     align-items:center;
     font-size:16px;
-    border:solid  green 2px;
+    border:solid  black 2px;
     gap:10px;
 }
 
+#keyA , #door{
+    background-color:rgb(228, 220, 220);
+    border:solid green 8px;
+}
+
+#keyB,  #arrow{
+    border:solid blue 8px;
+}
+
+
+#keyC, #boom{
+    background-color:rgb(228, 220, 220);
+    border: solid red 8px;
+}

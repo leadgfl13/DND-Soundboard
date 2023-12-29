@@ -1,12 +1,18 @@
-let keyA = document.getElementById('keyA')
-
+let a = new Audio('   ')
+let b = new Audio('')
+let c = new Audio (' ')
+let d = new Audio(' ')
+let e = new Audio('')
+let f = new Audio(' ')
+let g = new Audio(' ')
+let h = new Audio(' )')
 addEventListener('keypress', keyEvent)
 
 function keyEvent(e){
     let key = e.key
 
  if (key =='b' || key == "B"){
-        alert("hello b")
+        a.play()
     }
 if (key == 'a' || key == 'A'){
     alert('hello a')
@@ -31,7 +37,5 @@ if (key =='g' || key == "G"){
 if (key == 'h' || key == 'H'){
 alert('hello h')
 }
-
-
-
 }
+
