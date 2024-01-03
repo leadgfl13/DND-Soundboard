@@ -1,19 +1,18 @@
 
 
 // This section contains the door audio files and a variable that is a random door audio pulled from the array//
-let door1 = new Audio('')
+let door1 = new Audio('sounds/door1')
 let door2 = new Audio('')
 let door3= new Audio('')
 let door4 = new Audio('')
 
-let doors = [door1, door2, door3, door4]
+let doors = [door1]
 let randomdoor = Math.floor(Math.random()* doors.length)
-
-
 //takes an array, and then returns a random number based on the specific array to the global scope via return function)
-createRandom(arrayname){
-let random = Math.floor(Math.random()*arrayname.length)
-return(random)
+function createRandom(arrayname){
+    random = (Math.floor(Math.random()*arrayname.length))
+    return random
+
 }
 
 
@@ -32,9 +31,9 @@ function keyEvent(e){
     let key = e.key
 
  if (key == 'a' || key == 'A'){
-        alert('hello a')
-        createRandom(doors)
-        doors.random.play()
+       createRandom(doors)
+       doorchoice = doors[random]
+       doorchoice.play()
 
     }    
 
@@ -62,4 +61,3 @@ if (key == 'h' || key == 'H'){
 alert('hello h')
 }
 }
-
