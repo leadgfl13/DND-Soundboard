@@ -2,19 +2,19 @@
 
 // This section contains the door audio files and a variable that is a random door audio pulled from the array//
 let door1 = new Audio('sounds/door1')
-let door2 = new Audio('')
+let door2 = new Audio('sounds/door2.mp3')
 let door3= new Audio('')
 let door4 = new Audio('')
 
-let doors = [door1]
+let doors = [door1, door2]
 let randomdoor = Math.floor(Math.random()* doors.length)
 
 
 // This section contains the sound files for arrows files
-let arrow1 = new Audio('')
+let arrow1 = new Audio('sounds/arrows1')
 let arrow2 = new Audio('')
 let arrow3 = new Audio('')
-let arrows = [arrow1, arrow2, arrow3]
+let arrows = [arrow1]
 
 
 // This section contains the sound files for boom files
@@ -73,20 +73,26 @@ let h = new Audio(' ')
 
 addEventListener('keypress', keyEvent)
 
+
 function keyEvent(e){
     let key = e.key
 
  if (key == 'a' || key == 'A'){
+     turnYellow(abox)
        createRandom(doors)
        doorchoice = doors[random]
        doorchoice.play()
+       setTimeout(function(){turnWhite(abox)}, 1000);
+     
 
     }    
 
  if (key =='b' || key == "B"){
+    turnYellow(bbox)
     createRandom(arrows)
     arrowchoice = arrows[random]
     arrowchoice.play()
+    setTimeout(function(){turnWhite(bbox)},1000)
         }
 
 if (key =='c' || key == "C"){
@@ -127,3 +133,16 @@ if (key == 'h' || key == 'H'){
     thudchoice.play()
 }
 }
+
+
+
+//Create function to highlight sound effect, or key
+function turnYellow(keybox){
+    keybox.style.backgroundColor = 'yellow'
+}
+function turnWhite(keybox){
+    keybox.style.backgroundColor = 'white'
+}
+
+let abox = document.getElementById('keyA')
+let bbox = document.getElementById('keyB')
