@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(57, 184, 184);
+    background-image: linear-gradient(white, blue);
     margin:0;
     height:100vh;
 }
@@ -15,7 +15,7 @@ body{
 }
 
 .title{
-    text-decoration:underline;;
+    border:groove green 12px;
     grid-area:1/1/2/2;
     font-size:80px;
     margin:auto;

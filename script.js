@@ -12,16 +12,16 @@ let randomdoor = Math.floor(Math.random()* doors.length)
 
 // This section contains the sound files for arrows files
 let arrow1 = new Audio('sounds/arrows1')
-let arrow2 = new Audio('')
+let arrow2 = new Audio('sounds/arrow2.mp3')
 let arrow3 = new Audio('')
-let arrows = [arrow1]
+let arrows = [arrow1,arrow2]
 
 
 // This section contains the sound files for boom files
-let boom1 = new Audio('')
+let boom1 = new Audio('sounds/smallbomb.mp3')
 let boom2 = new Audio('')
 let boom3 = new Audio('')
-let booms = [boom1, boom2, boom3]
+let booms = [boom1]
 
 // This section contains the sound files for clashes
 let clash1 = new Audio('')
@@ -96,9 +96,12 @@ function keyEvent(e){
         }
 
 if (key =='c' || key == "C"){
+    turnYellow(cbox)
     createRandom(booms)
     boomchoice = booms[random]
     boomchoice.play()
+    setTimeout(function(){turnWhite(cbox)},1000)
+
 }
 
 if (key == 'd' || key == 'D'){
@@ -146,3 +149,4 @@ function turnWhite(keybox){
 
 let abox = document.getElementById('keyA')
 let bbox = document.getElementById('keyB')
+let cbox = document.getElementById('keyC')
