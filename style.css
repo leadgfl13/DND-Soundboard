@@ -15,7 +15,8 @@ body{
 }
 
 .title{
-    border:groove green 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline solid black 8px;;
     grid-area:1/1/2/2;
     font-size:80px;
     margin:auto;
