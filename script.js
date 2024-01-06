@@ -30,9 +30,9 @@ let clash3 = new Audio('sounds/clash3.mp3')
 let clashes = [clash1, clash2, clash3]
 
 // This section contains the sound files for swooshes files
-let swoosh1 = new Audio('')
-let swoosh2 = new Audio('')
-let swoosh3 = new Audio('')
+let swoosh1 = new Audio('sounds/swoosh1.mp3')
+let swoosh2 = new Audio('sounds/swoosh2.mp3')
+let swoosh3 = new Audio('sounds/swoosh3.mp3')
 let swooshes = [swoosh1, swoosh2, swoosh3]
 
 // This section contains the sound files for zap files
