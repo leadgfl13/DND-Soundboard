@@ -3,30 +3,30 @@
 // This section contains the door audio files and a variable that is a random door audio pulled from the array//
 let door1 = new Audio('sounds/door1')
 let door2 = new Audio('sounds/door2.mp3')
-let door3= new Audio('')
+let door3= new Audio('sounds/door3.mp3')
 let door4 = new Audio('')
 
-let doors = [door1, door2]
+let doors = [door1, door2, door3]
 let randomdoor = Math.floor(Math.random()* doors.length)
 
 
 // This section contains the sound files for arrows files
 let arrow1 = new Audio('sounds/arrows1')
 let arrow2 = new Audio('sounds/arrow2.mp3')
-let arrow3 = new Audio('')
-let arrows = [arrow1,arrow2]
+let arrow3 = new Audio('sounds/arrow3.mp3')
+let arrows = [arrow1,arrow2, arrow3]
 
 
 // This section contains the sound files for boom files
 let boom1 = new Audio('sounds/smallbomb.mp3')
-let boom2 = new Audio('')
-let boom3 = new Audio('')
-let booms = [boom1]
+let boom2 = new Audio('sounds/boom2.mp3')
+let boom3 = new Audio('sounds/boom3.mp3')
+let booms = [boom1, boom2, boom3]
 
 // This section contains the sound files for clashes
-let clash1 = new Audio('')
-let clash2 = new Audio('')
-let clash3 = new Audio('')
+let clash1 = new Audio('sounds/clash1.mp3')
+let clash2 = new Audio('sounds/clash2.mp3')
+let clash3 = new Audio('sounds/clash3.mp3')
 let clashes = [clash1, clash2, clash3]
 
 // This section contains the sound files for swooshes files
@@ -105,9 +105,11 @@ if (key =='c' || key == "C"){
 }
 
 if (key == 'd' || key == 'D'){
+    turnYellow(dbox)
     createRandom(clashes)
     clashchoices = clashes[random]
     clashchoices.play()
+    setTimeout(function(){turnWhite(dbox)},1000)
 }
 
 if (key =='e' || key == "E"){
@@ -139,7 +141,7 @@ if (key == 'h' || key == 'H'){
 
 
 
-//Create function to highlight sound effect, or key
+//Create function to highlight the key box when pressed, and then white 
 function turnYellow(keybox){
     keybox.style.backgroundColor = 'yellow'
 }
@@ -147,6 +149,13 @@ function turnWhite(keybox){
     keybox.style.backgroundColor = 'white'
 }
 
+//Creates each box as an element in the DOM tree so we can change its color when pressed
 let abox = document.getElementById('keyA')
 let bbox = document.getElementById('keyB')
 let cbox = document.getElementById('keyC')
+let dbox = document.getElementById('keyD')
+let ebox = document.getElementById('keyE')
+let fbox = document.getElementById('keyF')
+let gbox = document.getElementById('keyG')
+let hbox = document.getElementById('keyH')
+
