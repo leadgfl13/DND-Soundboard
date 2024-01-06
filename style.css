@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(white, blue);
+    background-image: linear-gradient(lightgray, blue);
     margin:0;
     height:100vh;
 }
@@ -15,19 +15,22 @@ body{
 }
 
 .title{
-    border:groove green 12px;
+    border:groove green 10px;
     grid-area:1/1/2/2;
     font-size:80px;
     margin:auto;
 }
 
 .keycontainers{
+    margin:2%;
     height:200px;
     display:grid;
     grid-template-columns:repeat(8, 1fr);
     grid-template-rows:1fr 1fr;
     text-align:center;
-    row-gap:10px;}
+    row-gap:15px;
+    gap:15px;
+}
 
 .key{
     display:flex;
@@ -35,7 +38,10 @@ body{
     align-items:center;
     font-size:16px;
     border:solid black 2px;
-    gap:5px;
+    background-color:white;
+    box-shadow: 4px 4px;
+    border-radius:8px;
+    
 }
 
 .sound{
@@ -44,20 +50,10 @@ body{
     align-items:center;
     font-size:16px;
     border:solid  black 2px;
-    gap:10px;
-}
-
-#keyA , #door{
-    background-color:rgb(228, 220, 220);
-    border:solid green 8px;
-}
-
-#keyB,  #arrow{
-    border:solid blue 8px;
-}
+    background-color:white;
+    box-shadow: 4px 4px;
+    border-radius:8px;
 
 
-#keyC, #boom{
-    background-color:rgb(228, 220, 220);
-    border: solid red 8px;
 }
+
