@@ -36,16 +36,16 @@ let swoosh3 = new Audio('sounds/swoosh3.mp3')
 let swooshes = [swoosh1, swoosh2, swoosh3]
 
 // This section contains the sound files for zap files
-let zap1 = new Audio('')
-let zap2 = new Audio('')
-let zap3 = new Audio('')
+let zap1 = new Audio('sounds/zap1.mp3')
+let zap2 = new Audio('sounds/zap2.mp3')
+let zap3 = new Audio('sounds/zap3.mp3')
 let zaps = [zap1, zap2, zap3]
 
 
 // This section contains the sound files for steps files
-let steps1 = new Audio('')
-let steps2 = new Audio('')
-let steps3 = new Audio('')
+let steps1 = new Audio('sounds/steps1.mp3')
+let steps2 = new Audio('sounds/steps2.mp3')
+let steps3 = new Audio('sounds/steps3.mp3')
 let steps = [steps1, steps2, steps3]
 
 // This section contains the sound files for thud files
