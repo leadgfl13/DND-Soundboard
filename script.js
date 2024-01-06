@@ -49,9 +49,9 @@ let steps3 = new Audio('sounds/steps3.mp3')
 let steps = [steps1, steps2, steps3]
 
 // This section contains the sound files for thud files
-let thud1 = new Audio('')
-let thud2 = new Audio('')
-let thud3 = new Audio('')
+let thud1 = new Audio('sounds/thud1.mp3')
+let thud2 = new Audio('sounds/thud2.mp3')
+let thud3 = new Audio('sound/thud3.mp3')
 let thuds = [thud1, thud2, thud3]
 //takes an array, and then returns a random number based on the specific array to the global scope via return function)
 
