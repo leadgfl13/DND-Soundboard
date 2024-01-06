@@ -33,7 +33,7 @@ let clashes = [clash1, clash2, clash3]
 let swoosh1 = new Audio('')
 let swoosh2 = new Audio('')
 let swoosh3 = new Audio('')
-let shwooshes = [swoosh1, swoosh2, swoosh3]
+let swooshes = [swoosh1, swoosh2, swoosh3]
 
 // This section contains the sound files for zap files
 let zap1 = new Audio('')
@@ -93,7 +93,8 @@ function keyEvent(e){
     arrowchoice = arrows[random]
     arrowchoice.play()
     setTimeout(function(){turnWhite(bbox)},1000)
-        }
+       
+}
 
 if (key =='c' || key == "C"){
     turnYellow(cbox)
@@ -113,29 +114,40 @@ if (key == 'd' || key == 'D'){
 }
 
 if (key =='e' || key == "E"){
+    turnYellow(ebox)
     createRandom(swooshes)
     swooshchoice = swooshes[random]
     swooshchoice.play()
+    setTimeout(function(){turnWhite(ebox)},1000)
 }
 
 
 if (key == 'f' || key == 'F'){
+    turnYellow(fbox)
     createRandom(zaps)
     zapchoice = zaps[random]
     zapchoice.play()
+    setTimeout(function(){turnWhite(fbox)},1000)
+
 }
 
 
 if (key =='g' || key == "G"){
+    turnYellow(gbox)
     createRandom(steps)
     stepchoice = steps[random]
-    stepchpice.play()
+    stepchoice.play()
+    setTimeout(function(){turnWhite(gbox)},1000)
+
 
 }
 if (key == 'h' || key == 'H'){
+    turnYellow(hbox)
     createRandom(thuds)
     thudchoice =thuds[random]
     thudchoice.play()
+    setTimeout(function(){turnWhite(hbox)},1000)
+
 }
 }
 
